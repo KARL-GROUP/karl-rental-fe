@@ -13,7 +13,7 @@ module.exports = {
       colors:{
         "primary-gray" : "#1C1C1C"
       },
-      dropShadow:{
+      boxShadow:{
         '3xl': '0 5px 5px gray'
       }
     },

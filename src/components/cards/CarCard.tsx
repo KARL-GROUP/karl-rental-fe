@@ -15,7 +15,7 @@ const CarCard = ({ image, carName, price }: Props) => {
     <>
 
 
-      <div className="drop-shadow-3xl w-[20rem] rounded-[16px]">
+      <div className=" w-[20rem] rounded-[16px]">
         <Image className="w-full object-fill rounded-t-[16px] " src={image} alt="car" width={100} height={100} />
         <div className="text-white px-5 py-5 flex flex-col gap-2">
           <p className="text-xl">{carName}</p>
