@@ -17,7 +17,7 @@ export default function Home() {
 
     
     <h1 className='text-red-500 '> Init</h1>  
-    <Button onClick={handleClick} styles="bg-yellow-500" children="hellow"/>
+    <Button onClick={handleClick} styles="bg-yellow-500" text="hellow"/>
     <CarCard />
     </section>
       </>
