@@ -1,14 +1,14 @@
 interface Props{
-    children: string,
-    className: string
+    children: any,
+    className ?: string
 }
 
 const SectionWrapper = ({children}: Props) => {
     return ( 
         <>
-        <SectionWrapper className="max-w-[80rem] mx-auto">
+        <section className="max-w-[80rem] mx-auto">
             {children}
-        </SectionWrapper>
+        </section>
         </>
      );
 }
