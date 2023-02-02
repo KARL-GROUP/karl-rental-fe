@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <> 
     <div className="bg-black h-[100vh] p-5">
-    <Input label='' />
+    <Input  name='something' value='something' inputLabel='something' onChange />
     </div>
       </>
   )
