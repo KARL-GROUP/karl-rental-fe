@@ -1,7 +1,7 @@
 interface Props {
-  children: string,
-  styles: string,
-  onClick: () => void;
+  children ?: string,
+  styles ?: string,
+  onClick ?: () => void;
 }
 
 const Button = ({ children, styles, onClick }: Props) => {

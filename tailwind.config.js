@@ -12,6 +12,9 @@ module.exports = {
     extend: {
       colors:{
         "primary-gray" : "#1C1C1C"
+      },
+      dropShadow:{
+        '3xl': '0 5px 5px gray'
       }
     },
   },
