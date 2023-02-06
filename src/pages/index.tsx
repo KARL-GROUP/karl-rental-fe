@@ -7,6 +7,7 @@ import CarCard from '@/components/cards/CarCard'
 import CarSection from '@/components/sections/CarSection'
 import HowItWorks from '@/components/sections/HowItWorks'
 import Hero from '@/components/sections/Hero'
+import Footer from '@/components/layout/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
 
         <HowItWorks />
         <CarSection />
+        <Footer />
 
        
 
