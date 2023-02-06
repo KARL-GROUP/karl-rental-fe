@@ -6,7 +6,7 @@ interface Props{
 const SectionWrapper = ({children}: Props) => {
     return ( 
         <>
-        <section className="max-w-[80rem] mx-auto">
+        <section className="px-8 xl:max-w-[80rem] mx-auto">
             {children}
         </section>
         </>

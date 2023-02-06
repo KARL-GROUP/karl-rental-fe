@@ -5,6 +5,8 @@ import styles from '@/styles/Home.module.css'
 import Button from '@/components/ui/Button'
 import CarCard from '@/components/cards/CarCard'
 import CarSection from '@/components/sections/CarSection'
+import HowItWorks from '@/components/sections/HowItWorks'
+import Hero from '@/components/sections/Hero'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -14,13 +16,14 @@ export default function Home() {
 
   return (
     <>
-      <section className='px-44 bg-black'>
+      <section className=' bg-[#F3F2EF]'>
+        <Hero />
 
-
-        <h1 className='text-red-500 '> Init</h1>
-        
-        {/* <Button onClick={handleClick} styles="bg-yellow-500" text="hellow"/> */}
+        <HowItWorks />
         <CarSection />
+
+       
+
       </section>
     </>
   )

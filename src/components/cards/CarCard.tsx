@@ -17,12 +17,12 @@ const CarCard = ({ image, carName, price }: Props) => {
 
       <div className=" w-[20rem] rounded-[16px]">
         <Image className="w-full object-fill rounded-t-[16px] " src={image} alt="car" width={100} height={100} />
-        <div className="text-white px-5 py-5 flex flex-col gap-2">
-          <p className="text-xl">{carName}</p>
-          <p className="text-xl">{price}</p>
+        {/* <div className="text-white px-5 py-5 flex flex-col gap-2">
+          <p className="text-lg">{carName}</p>
+          <p className="text-[10px] text-red-500">{price}</p>
           <Button text="Book" styles="w-full" />
 
-        </div>
+        </div> */}
 
       </div>
 

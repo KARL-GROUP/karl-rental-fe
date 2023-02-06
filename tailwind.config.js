@@ -14,7 +14,7 @@ module.exports = {
         "primary-gray" : "#1C1C1C"
       },
       boxShadow:{
-        '3xl': '0 5px 5px gray'
+        '3xl': '0px 3px 20px rgba(255, 255, 255, 0.25)'
       }
     },
   },
