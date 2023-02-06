@@ -15,13 +15,13 @@ const Hero = () => {
 
 
 
-        <div className="w-full hero h-full flex  justify-center items-center 
-                 bg-gray-900/30 backdrop-brightness-75 pl-20 py-28">
-            <div className="w-1/2 flex flex-col gap-5">
-                <h1 className="text-6xl text-black font-bold leading-[70px]">Best deals on your next
+        <div className="w-full hero h-full flex flex-col xl:flex xl:flex-row  justify-center items-center 
+                 bg-gray-900/30 backdrop-brightness-75 xl:pl-20 bg-yellow-500 py-28">
+            <div className="w-full px-6 xl:w-1/2 flex flex-col gap-5">
+                <h1 className="text-5xl w-full xl:text-6xl text-black font-bold leading-[60px] xl:leading-[70px]">Best deals on your next
                     rental. BOOK NOW</h1>
                 <p className="font-medium text-xl">Easy Search</p>
-                <div className="bg-white w-[43rem]  py-10 rounded-lg flex justify-between items-center px-5 h-12">
+                <div className="bg-white w-[43rem]  py-10 rounded-lg xl:flex xl:flex-row hidden md:block justify-between items-center px-5 h-12">
                     <Select options={options} placeholder="Type of car you looking for" className="outline-none border-0" />
                     <div className="flex gap-3 items-center border-l border-black px-4 h-12">
                         <p>From</p>
@@ -51,8 +51,8 @@ const Hero = () => {
                 
             </div>
 
-            <div className="w-1/2 mb-[-100px]">
-                <Image src={carHero} className="w-full object-fit" alt="car" width={100} height={100} />
+            <div className="h-[10rem] xl:h-auto mt-10 xl:w-1/2 mb-[-100px] mr-[-5rem] xl:mr-0">
+                <Image src={carHero} className="w-full  h-full object-fit" alt="car" width={100} height={100} />
             </div>
 
         </div>
