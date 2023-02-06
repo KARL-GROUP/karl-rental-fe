@@ -38,10 +38,10 @@ const Hero = () => {
 
                     </div>
 
-                    <div className="border-l border-black px-4 h-12">
-                        <Button styles="bg-[#3F3CD4] -mt-0 shadow-xl" text="Search" />
+                    {/* <div className="border-l border-black px-4 h-12"> */}
+                        <Button styles="bg-[#3F3CD4] mt-0 shadow-xl" text="Search" />
 
-                    </div>
+                    {/* </div> */}
                 </div>
                 <div className="flex gap-10 items-center mt-5">
                     <p className="font-bold">Or</p>

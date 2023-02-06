@@ -18,7 +18,7 @@ const CarSection = () => {
               <div className=" px-5 py-5 flex flex-col gap-2">
               <p className="text-md">{car.carName}</p>
               <p className="text-md">{car.price}</p>
-              <Button text="Book" styles="w-full" /> 
+              <Button text="Book" styles="w-full bg-black" /> 
 
               </div>
               
