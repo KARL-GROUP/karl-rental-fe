@@ -51,7 +51,7 @@ const Hero = () => {
                 
             </div>
 
-            <div className="h-[10rem] xl:h-auto mt-10 xl:w-1/2 mb-[-100px] mr-[-5rem] xl:mr-0">
+            <div className="h-[10rem] hidden md:block xl:h-auto mt-10 xl:w-1/2 mb-[-100px] mr-[-5rem] xl:mr-0">
                 <Image src={carHero} className="w-full  h-full object-fit" alt="car" width={100} height={100} />
             </div>
 
