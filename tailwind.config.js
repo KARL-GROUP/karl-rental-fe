@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        "primary-gray" : "#1C1C1C"
+        "primary-gray" : "#1C1C1C",
+        "primary-purple" : "#3F3CD4"
       },
       boxShadow:{
         '3xl': '0px 3px 20px rgba(255, 255, 255, 0.25)'

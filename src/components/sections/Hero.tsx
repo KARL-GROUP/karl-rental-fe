@@ -21,7 +21,8 @@ const Hero = () => {
                 <h1 className="text-5xl w-full xl:text-6xl text-black font-bold leading-[60px] xl:leading-[70px]">Best deals on your next
                     rental. BOOK NOW</h1>
                 <p className="font-medium text-xl">Easy Search</p>
-                <div className="bg-white w-[43rem]  py-10 rounded-lg xl:flex xl:flex-row hidden md:block justify-between items-center px-5 h-12">
+                <div className="bg-white py-10 rounded-lg w-full xl:flex xl:flex-row  md:block justify-between items-center px-5 xl:h-12">
+                    
                     <Select options={options} placeholder="Type of car you looking for" className="outline-none border-0" />
                     <div className="flex gap-3 items-center border-l border-black px-4 h-12">
                         <p>From</p>
@@ -51,7 +52,7 @@ const Hero = () => {
                 
             </div>
 
-            <div className="h-[10rem] hidden md:block xl:h-auto mt-10 xl:w-1/2 mb-[-100px] mr-[-5rem] xl:mr-0">
+            <div className="h-[10rem]  md:block xl:h-auto mt-10 xl:w-1/2 mb-[-100px] mr-[-5rem] xl:mr-0">
                 <Image src={carHero} className="w-full  h-full object-fit" alt="car" width={100} height={100} />
             </div>
 
