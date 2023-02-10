@@ -2,7 +2,13 @@ import Image from "next/image";
 import carHero from '../../../public/assets/herocar.png'
 import Button from "../ui/Button";
 import Select from 'react-select'
+import DatePicker from 'react-date-picker';
+import { useState } from "react";
+
 const Hero = () => {
+
+    const [value, onChange] = useState(new Date());
+
 
     const options = [
         { value: 'Car one', label: 'Car one' },
@@ -16,7 +22,7 @@ const Hero = () => {
 
 
         <div className="w-full hero h-full flex flex-col xl:flex xl:flex-row  justify-center items-center 
-                 bg-gray-900/30 backdrop-brightness-75 xl:pl-20 bg-yellow-500 py-28">
+                 bg-gray-900/30 backdrop-brightness-75 xl:pl-20 py-28">
             <div className="w-full px-6 xl:w-1/2 flex flex-col gap-5">
                 <h1 className="text-5xl w-full xl:text-6xl text-black font-bold leading-[60px] xl:leading-[70px]">Best deals on your next
                     rental. BOOK NOW</h1>
@@ -46,7 +52,7 @@ const Hero = () => {
                 </div>
                 <div className="flex gap-10 items-center mt-5">
                     <p className="font-bold">Or</p>
-                <Button styles="bg-[#3F3CD4] w-44 mt-0 shadow-xl py-4" text="View all cars" />
+                <Button styles="bg-[#a5f3fc] text-black w-44 mt-0 shadow-xl py-4" text="View all cars" />
 
                 </div>
                 

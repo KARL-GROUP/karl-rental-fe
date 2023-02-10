@@ -27,7 +27,7 @@ export const sidebarItem: Sidebar[] = [
 
     },
     {
-        text: "Add Car",
+        text: "Requests",
         icon: "/assets/search.png",
         path: "/"
 
