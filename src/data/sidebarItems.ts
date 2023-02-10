@@ -13,12 +13,12 @@ export const sidebarItem: Sidebar[] = [
     {
         text: "Dashboard",
         icon: "/assets/search.png",
-        path: "/dashboard"
+        path: "/Dashboard"
     },
     {
         text: "Add Car",
         icon: "/assets/search.png",
-        path: "/addCar"
+        path: "/AddCar"
     },
     {
         text: "View all cars",

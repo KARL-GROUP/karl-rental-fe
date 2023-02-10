@@ -4,6 +4,7 @@ import Button from "../ui/Button";
 import Select from 'react-select'
 import DatePicker from 'react-date-picker';
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const Hero = () => {
 
@@ -17,12 +18,21 @@ const Hero = () => {
         { value: 'Car one', label: 'Car one' },
     ]
 
-    return (
+    const router = useRouter()
 
+    const handleClick = (e: any) => {
+        e.preventDefault()
+        router.push('/Dashboard')
+
+    }
+
+    return (
 
 
         <div className="w-full hero h-full flex flex-col xl:flex xl:flex-row  justify-center items-center 
                  bg-gray-900/30 backdrop-brightness-75 xl:pl-20 py-28">
+<button onClick={handleClick}>Dashboard</button>
+           
             <div className="w-full px-6 xl:w-1/2 flex flex-col gap-5">
                 <h1 className="text-5xl w-full xl:text-6xl text-black font-bold leading-[60px] xl:leading-[70px]">Best deals on your next
                     rental. BOOK NOW</h1>
