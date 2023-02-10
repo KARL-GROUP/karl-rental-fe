@@ -8,6 +8,8 @@ import CarSection from '@/components/sections/CarSection'
 import HowItWorks from '@/components/sections/HowItWorks'
 import Hero from '@/components/sections/Hero'
 import Footer from '@/components/layout/Footer'
+import Input from '../components/ui/Input'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -19,14 +21,11 @@ export default function Home() {
     <>
       <section className=' bg-[#F3F2EF]'>
         <Hero />
-
         <HowItWorks />
         <CarSection />
         <Footer />
-
-       
-
       </section>
     </>
+
   )
 }
