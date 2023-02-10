@@ -3,7 +3,7 @@ import SideBarWrapper from "@/components/Wrappers/SideBarWrapper";
 import ContentWrapper from "@/components/Wrappers/ContentWrapper";
 import { useState } from "react";
 
-const dashboard = () => {
+const Dashboard = () => {
     const [show, setShow] = useState(true)
     return ( 
         <>
@@ -37,4 +37,4 @@ const dashboard = () => {
      );
 }
  
-export default dashboard;
+export default Dashboard;
