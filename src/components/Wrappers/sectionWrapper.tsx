@@ -6,8 +6,10 @@ interface Props{
 const SectionWrapper = ({children}: Props) => {
     return ( 
         <>
-        <section className="px-8 xl:max-w-[80rem] mx-auto">
+        <section className="bg-[#F3F2EF]">
+        <section className="px-8 xl:max-w-[85rem] mx-auto ">
             {children}
+        </section>
         </section>
         </>
      );

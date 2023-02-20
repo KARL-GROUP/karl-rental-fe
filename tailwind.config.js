@@ -10,7 +10,8 @@ module.exports = {
     extend: {
       colors:{
         "primary-gray" : "#1C1C1C",
-        "primary-purple" : "#3F3CD4"
+        "primary-purple" : "#3F3CD4",
+        "primary-background" : "#F3F2EF"
       },
       boxShadow:{
         '3xl': '0px 3px 20px rgba(255, 255, 255, 0.25)'

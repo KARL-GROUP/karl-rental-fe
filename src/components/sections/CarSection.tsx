@@ -9,7 +9,7 @@ const CarSection = () => {
     // <>
     <SectionWrapper>
       <h1 className="text-center mt-16 font-bold text-2xl">Customer Favorites</h1>
-      <section className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <section className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {cars.map((car: Car, index: number) => {
           return (
             <div key={index} className="bg-white shadow-3xl rounded-[16px]">
