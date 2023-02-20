@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <>
-      <section className=' bg-[#F3F2EF]'>
+      <section className=' bg-[#F3F2EF] font-mont'>
         <Hero />
         <HowItWorks />
         <CarSection />

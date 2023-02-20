@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        mont: "mont",
+        montHeavy: "montHeavy",
+        montBold:"montBold"
+      },
       colors:{
         "primary-gray" : "#1C1C1C",
         "primary-purple" : "#3F3CD4",
