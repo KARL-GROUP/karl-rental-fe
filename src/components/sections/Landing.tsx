@@ -109,7 +109,7 @@ const Landing = () => {
                 <section className="grid grid-cols-4 gap-y-5 gap-x-10 bg-[#F3F2EF] py-10">
                     {cars.map((car, index) => {
                         return (
-                            <div className="bg-white shadown rounded-xl py-5 px-5 border flex flex-col gap-5">
+                            <div key={index} className="bg-white shadown rounded-xl py-5 px-5 border flex flex-col gap-5">
                                 <div>
                                     <p className="font-bold">{car.carName}</p>
                                     <p className="text-gray-500">{car.category}</p>
