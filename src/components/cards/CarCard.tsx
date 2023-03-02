@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Key } from "react";
 import Button from "../ui/Button";
 import SectionWrapper from "../Wrappers/sectionWrapper";
+import Profile from "../svgs/Profile";
+import CategoryIcon from "../svgs/CategoryIcon";
 
 interface Props {
   image: string,
@@ -23,8 +25,15 @@ const CarCard = ({ image, carName, price, category, seats }: Props) => {
 <p>Category category category</p>
         <Image className="w-full object-fill rounded-t-[16px] " src={image} alt="car" width={100} height={100} />
         <div className=" px-5 py-5 flex justify-between gap-2">
+          <div>
+            <Profile />
           <p>{seats}</p>
+          </div>
+          <div>
+          <CategoryIcon />
           <p>{category}</p>
+          </div>
+          
           <p className="text-[10px] ">{price}</p>
 
 
