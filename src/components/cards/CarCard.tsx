@@ -23,7 +23,7 @@ const CarCard = ({ image, carName, price, category, seats }: Props) => {
       <div className="shadow rounded-[16px] bg-white py-5 px-[30px] flex flex-col gap-5">
         <p className="text-lg">{carName}</p>
         <p>Category category category</p>
-        <div className="relative w-full h-[30vh]">
+        <div className="relative w-full h-[20vh]">
           <Image className=" absolute object-fill rounded-t-[16px] " src={image} alt="car" layout="fill" />
 
 
@@ -43,7 +43,7 @@ const CarCard = ({ image, carName, price, category, seats }: Props) => {
 
 
         </div>
-        <Button text="Book" styles="w-full" />
+        {/* <Button text="Book" styles="w-full" /> */}
 
 
       </div>

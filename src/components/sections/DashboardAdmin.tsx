@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 const DashboardAdmin = () => {
     return (
         <>
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
                 <p>All Cars</p>
                 <div className="flex justify-between  gap-5">
                     <div className="flex justify-between shadow bg-white py-4 px-5 rounded-md">
@@ -21,7 +21,7 @@ const DashboardAdmin = () => {
                     />
                 </div>
             </div>
-            <div className="grid grid-cols-2 gap-10 w-4/5 mt-10">
+            <div className="grid grid-cols-3 gap-10  mt-10">
 
 
                 {cars.map((car, index) => {
