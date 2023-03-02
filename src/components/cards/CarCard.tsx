@@ -6,6 +6,7 @@ import Button from "../ui/Button";
 import SectionWrapper from "../Wrappers/sectionWrapper";
 import Profile from "../svgs/Profile";
 import CategoryIcon from "../svgs/CategoryIcon";
+import GearBox from '../../../public/assets/GearBox.png'
 
 interface Props {
   image: string,
@@ -29,11 +30,12 @@ const CarCard = ({ image, carName, price, category, seats }: Props) => {
             <Profile />
           <p className="mt-1">{seats}</p>
           </div>
-          <div>
+          <div className="flex items-center gap-2">
+            <Image src={GearBox} width={18} height={18} alt="Category" />
           <p>{category}</p>
           </div>
           
-          <p className="text-[10px] ">{price}</p>
+          <p className="">{price}</p>
 
 
         </div>
