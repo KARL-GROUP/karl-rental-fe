@@ -21,11 +21,11 @@ const CarCard = ({ image, carName, price, category, seats }: Props) => {
     <>
 
 
-      <div className=" w-[20rem] rounded-[16px]">
+      <div className=" rounded-[16px] bg-white py-5 px-[30px] flex flex-col gap-5">
       <p className="text-lg">{carName}</p>
 <p>Category category category</p>
         <Image className="w-full object-fill rounded-t-[16px] " src={image} alt="car" width={100} height={100} />
-        <div className=" px-5 py-5 flex justify-between gap-2">
+        <div className="flex justify-between gap-2">
           <div className="flex items-center gap-2">
             <Profile />
           <p className="mt-1">{seats}</p>

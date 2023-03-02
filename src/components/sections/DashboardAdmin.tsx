@@ -3,6 +3,9 @@ import { cars } from "@/data/cars";
 const DashboardAdmin = () => {
     return ( 
         <>
+        <div className="grid grid-cols-2 gap-10 w-4/5">
+
+       
         {cars.map((car, index) => {
             return(
                 // <h1>hello</h1>
@@ -11,6 +14,7 @@ const DashboardAdmin = () => {
 
             )
         })}
+         </div>
         </>
      );
 }
