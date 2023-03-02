@@ -5,19 +5,18 @@ export interface Sidebar{
 }
 
 import DashboardIcon from "@/components/svgs/DashboardIcon"
-
-
+import Profile from "@/components/svgs/Profile"
 
 
 export const sidebarItem: Sidebar[] = [
     {
         text: "Dashboard",
-        icon: "/assets/search.png",
+        icon: "/assets/car.svg",
         path: "/Dashboard"
     },
     {
         text: "Add Car",
-        icon: "/assets/search.png",
+        icon: `<Profile />`,
         path: "/AddCar"
     },
     {
