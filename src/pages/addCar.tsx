@@ -3,7 +3,7 @@ import Sidebar from "@/components/layout/admin/Sidebar";
 import ContentWrapper from "@/components/Wrappers/ContentWrapper";
 import SideBarWrapper from "@/components/Wrappers/SideBarWrapper";
 import { useState } from "react";
-const addCar = () => {
+const AddCar = () => {
     const [show, setShow] = useState(true);
     return (
         <>
@@ -19,4 +19,4 @@ const addCar = () => {
     );
 }
 
-export default addCar;
+export default AddCar;
