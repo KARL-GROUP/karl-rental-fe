@@ -1,62 +1,62 @@
 const GeneralInfo = () => {
-    const recentOrders =[
+    const recentOrders = [
         {
             plate: "RAC00DA",
             status: "Pending",
-            from : "01/01/2022",
+            from: "01/01/2022",
             to: "01/01/2022"
         },
         {
             plate: "RAC00DA",
             status: "Pending",
-            from : "01/01/2022",
+            from: "01/01/2022",
             to: "01/01/2022"
         },
         {
             plate: "RAC00DA",
             status: "Pending",
-            from : "01/01/2022",
+            from: "01/01/2022",
             to: "01/01/2022"
         },
         {
             plate: "RAC00DA",
             status: "Pending",
-            from : "01/01/2022",
+            from: "01/01/2022",
             to: "01/01/2022"
         },
         {
             plate: "RAC00DA",
             status: "Pending",
-            from : "01/01/2022",
+            from: "01/01/2022",
             to: "01/01/2022"
         },
         {
             plate: "RAC00DA",
             status: "Pending",
-            from : "01/01/2022",
+            from: "01/01/2022",
             to: "01/01/2022"
         },
     ]
-    return ( 
+    return (
         <>
-        <section>
-            <p>Recent Orders</p>
-            <div>
-                {recentOrders.map((order, index) => {
-                    return(
-                        <div className="bg-white py-5 px-5">
-                            <h1>Car name</h1>
-                            <p>Plate: {order.plate}</p>
-                            <p>Status: {order.status}</p>
-                            <p>From: {order.from}</p>
-                            <p>To: {order.to}</p>
+            <section>
+                <p>Recent Orders</p>
+                <div className="flex overflow-x-scroll gap-10 py-10">
+                    {recentOrders.map((order, index) => {
+                        return (
+                            <div className="bg-white shadow py-5 px-5 min-w-[15rem]">
+                                <h1>Car name</h1>
+                                <p>Plate: {order.plate}</p>
+                                <p>Status: {order.status}</p>
+                                <p>From: {order.from}</p>
+                                <p>To: {order.to}</p>
                             </div>
-                    )
-                })}
-            </div>
-        </section>
+                        )
+                    })}
+                </div>
+            </section>
         </>
-     );
+    );
 }
- 
+
 export default GeneralInfo;
