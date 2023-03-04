@@ -1,98 +1,107 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 
-interface ApiRequest {
-carImages: string;
-name: string;
-description: string;
-plate: string;
-transmission: string;
-price: string;
-seats: string;
-// category: string;
+interface CarFormValues {
+  name: string;
+  description: string;
+  plate: string;
+  transmission: string;
+  price: string;
+  seats: string;
+  // category: string;
+  // carImages: FileList;
 }
 
-export default function Cars() {
-const [name, setName] = useState('');
-const [description, setDescription] = useState('');
-const [file, setFile] = useState<File | null>(null);
-const [plate, setPlate] = useState('');
-const [transmission, setTransmission] = useState('');
-const [price, setPrice] = useState<string>("");
-const [seats, setSeats] = useState<string>("");
-const [category, setCategory] = useState('');
+const initialFormValues: CarFormValues = {
+  name: '',
+  description: '',
+  plate: '',
+  transmission: '',
+  price: '',
+  seats: '',
+  // category: '',
+  // carImages: '',
+};
 
-async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-event.preventDefault();
-if (!file) {
-    throw new Error('File is required');
-  }
+export default function CarForm() {
+  const [formValues, setFormValues] = useState<CarFormValues>(initialFormValues);
+  const [carImages, setCarImages] = useState<FileList | null>(null);
+  function handleSubmit(event: FormEvent) {
+    event.preventDefault();
   
-  const reader = new FileReader();
-  reader.readAsDataURL(file);
-  reader.onload = () => {
-    const data: ApiRequest = {
-        carImages: reader.result as string,
-      name,
-      description,
-      plate,
-      transmission,
-      price,
-      seats,
-      // category
-    };
+    const formData = new FormData();
+    formData.append('name', formValues.name);
+    formData.append('description', formValues.description);
+    formData.append('plate', formValues.plate);
+    formData.append('transmission', formValues.transmission);
+    formData.append('price', formValues.price);
+    formData.append('seats', formValues.seats);
+    // formData.append('category', formValues.category);
+  
+    if (carImages) {
+      for (let i = 0; i < carImages.length; i++) {
+        formData.append('carImages', carImages[i]);
+      }
+    }
   
     fetch('https://karla-rental-be-development.up.railway.app/api/cars/create', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+      body: formData,
     })
     .then(response => response.json())
-    .then(response => {
-      console.log(response);
+    .then(data => {
+      console.log('Success:', data);
     })
     .catch(error => {
-      console.error(error);
+      console.error('Error:', error);
     });
-  };
-}
+  }
+  
 
-return (
-<form onSubmit={handleSubmit} className="flex flex-col gap-5">
-<label>
-Name:
-<input type="text" value={name} onChange={(event) => setName(event.target.value)} />
-</label>
-<label>
-Description:
-<textarea value={description} onChange={(event) => setDescription(event.target.value)} />
-</label>
-<label>
-Plate:
-<input type="text" value={plate} onChange={(event) => setPlate(event.target.value)} />
-</label>
-<label>
-Transmission:
-<input type="text" value={transmission} onChange={(event) => setTransmission(event.target.value)} />
-</label>
-<label>
-Price:
-<input type="text" value={price} onChange={(event) => setPrice(event.target.value)} />
-</label>
-<label>
-Seats:
-<input type="text" value={seats} onChange={(event) => setSeats(event.target.value)} />
-</label>
-<label>
-Category:
-<input type="text" value={category} onChange={(event) => setCategory(event.target.value)} />
-</label>
-<label>
-Image:
-<input type="file" onChange={(event) => setFile(event.target.files?.[0] || null)} />
-</label>
-<button type="submit">Submit</button>
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const handleFileInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, files } = event.target;
+    setFormValues({ ...formValues, [name]: files });
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <label>
+        Name:
+        <input type="text" name="name" value={formValues.name} onChange={handleInputChange} required />
+      </label>
+      <label>
+        Description:
+        <textarea name="description" value={formValues.description} onChange={handleInputChange} required />
+      </label>
+      <label>
+        Plate:
+        <input type="text" name="plate" value={formValues.plate} onChange={handleInputChange} required />
+      </label>
+      <label>
+        Transmission:
+        <input type="text" name="transmission" value={formValues.transmission} onChange={handleInputChange} required />
+      </label>
+      <label>
+        Price:
+        <input type="text" name="price" value={formValues.price} onChange={handleInputChange} required />
+      </label>
+      <label>
+        Seats:
+        <input type="text" name="seats" value={formValues.seats} onChange={handleInputChange} required />
+      </label>
+      {/* <label>
+        Category:
+        <input type="text" name="category" value={formValues.category} onChange={handleInputChange} required />
+  </label> */}
+  <label>
+    Car Images:
+    <input type="file" name="carImages" onChange={handleFileInputChange} multiple />
+  </label>
+  <button type="submit">Submit</button>
 </form>
-);
+  )
 }

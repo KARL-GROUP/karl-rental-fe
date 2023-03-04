@@ -24,6 +24,8 @@ const Landing = () => {
     ]
 
 
+    const samples = cars.slice(0, 5)
+
     return (
         <>
             <SectionWrapper className="bg-[#F3F2EF]">
@@ -107,7 +109,7 @@ const Landing = () => {
                 </section> */}
 
                 <section className="grid grid-cols-4 gap-y-5 gap-x-10 bg-[#F3F2EF] py-10">
-                    {cars.map((car, index) => {
+                    {samples.map((car, index)=> {
                         return (
                             <div key={index} className="bg-white shadown rounded-xl py-5 px-5 border flex flex-col gap-5">
                                 <div>

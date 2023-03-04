@@ -5,12 +5,14 @@ import { Key } from "react";
 import Button from "../ui/Button";
 import SectionWrapper from "../Wrappers/sectionWrapper";
 const CarSection = () => {
+
+  const samples = cars.slice(0, 8)
   return (
     // <>
     <SectionWrapper>
       <h1 className="text-center mt-16 font-bold text-2xl">Customer Favorites</h1>
       <section className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        {cars.map((car: Car, index: number) => {
+        {samples.map((car: Car, index: number) => {
           return (
             <div key={index} className="bg-white shadow-3xl rounded-[16px]">
               <Image className="w-full shadow-3xl object-fill rounded-t-[16px] " src={car.image} alt="car" width={100} height={100} />
