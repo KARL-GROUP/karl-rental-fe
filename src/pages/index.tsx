@@ -21,11 +21,11 @@ export default function Home() {
   return (
     <>
       <section className=' bg-[#F3F2EF] font-mont'>
-        <Hero />
+        {/* <Hero />
         <HowItWorks />
         <CarSection />
-        <Footer />
-        {/* <Cars /> */}
+        <Footer /> */}
+        <Cars />
       </section>
     </>
 
