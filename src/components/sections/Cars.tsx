@@ -7,7 +7,7 @@ interface CarFormValues {
   transmission: string;
   price: string;
   seats: string;
-  // category: string;
+  category: string;
   // carImages: FileList;
 }
 
@@ -18,7 +18,7 @@ const initialFormValues: CarFormValues = {
   transmission: '',
   price: '',
   seats: '',
-  // category: '',
+  category: '',
   // carImages: '',
 };
 
@@ -35,7 +35,7 @@ export default function CarForm() {
     formData.append('transmission', formValues.transmission);
     formData.append('price', formValues.price);
     formData.append('seats', formValues.seats);
-    // formData.append('category', formValues.category);
+    formData.append('category', formValues.category);
   
     if (carImages) {
       for (let i = 0; i < carImages.length; i++) {
@@ -93,10 +93,10 @@ export default function CarForm() {
         Seats:
         <input type="text" name="seats" value={formValues.seats} onChange={handleInputChange} required />
       </label>
-      {/* <label>
+      <label>
         Category:
         <input type="text" name="category" value={formValues.category} onChange={handleInputChange} required />
-  </label> */}
+  </label>
   <label>
     Car Images:
     <input type="file" name="carImages" onChange={handleFileInputChange} multiple />
