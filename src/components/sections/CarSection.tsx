@@ -20,9 +20,7 @@ const CarSection = () => {
                 <p className="text-md">{car.carName}</p>
                 <p className="text-md">{car.price}</p>
                 <Button text="Book" styles="w-full bg-black" />
-
               </div>
-
             </div>
           )
         })}
