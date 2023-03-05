@@ -20,12 +20,12 @@ export default function Home() {
 
   return (
     <>
-      <section className=' font-mont'>
-        {/* <Hero />
+      <section className=' font-mont bg-[#F3F2EF]'>
+        <Hero />
         <HowItWorks />
         <CarSection />
-        <Footer /> */}
-        <Cars />
+        <Footer />
+        {/* <Cars /> */}
       </section>
     </>
 
