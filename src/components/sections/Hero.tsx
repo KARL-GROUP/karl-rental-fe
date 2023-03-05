@@ -1,5 +1,6 @@
 import Image from "next/image";
 import carHero from '../../../public/assets/herocar.png'
+import hero from '../../../public/assets/hero.jpg'
 import Button from "../ui/Button";
 import Select from 'react-select'
 import DatePicker from 'react-date-picker';
@@ -29,11 +30,13 @@ const Hero = () => {
     return (
 
 
-        <div className="w-full hero h-full flex flex-col xl:flex xl:flex-row  justify-center bg-green-500
-                 bg-gray-900/30 backdrop-brightness-75 xl:pl-20 py-28">
+        <div className="relative w-full hero h-[90vh] flex flex-col xl:flex xl:flex-row  justify-center bg-green-500
+                 bg-gray-900/30 backdrop-brightness-75  py-28">
 <button onClick={handleClick}>Dashboard</button>
-           
-            <div className="w-full px-6 xl:w-1/2  flex flex-col gap-5">
+  <Image src={hero} alt="car" layout="fill"/>
+           {/* <div className="blur"></div> */}
+            <div className="w-full flex justify-between absolute">
+                <div className="w-1/2 pl-44">
                 <h1 className="text-5xl w-full xl:text-6xl text-black font-bold leading-[60px] xl:leading-[70px]">Best deals on your next
                     rental. BOOK NOW</h1>
                 <p className="font-medium text-xl">Easy Search</p>
@@ -60,18 +63,20 @@ const Hero = () => {
 
                     </div>
                 </div>
+                </div>
+                
                 <div className="flex gap-10 items-center mt-5">
                     <p className="font-bold">Or</p>
                 <Button styles="bg-[#a5f3fc] text-black w-44 mt-0 shadow-xl py-4" text="View all cars" />
 
                 </div>
-                
-            </div>
-
-            <div className="h-[30rem] w-[40rem] mb-0 mr-0 relative">
+                <div className="h-[30rem] w-[40rem] mb-0 mr-0 relative">
                 <Image src={carHero} className=" absolute object-fit" alt="car" layout="fill" />
             </div>
+            </div>
 
+            
+            {/* <div className="absolute inset-0 overlay h-full w-[50%] z-20 test bg-black/90"></div> */}
         </div>
 
 

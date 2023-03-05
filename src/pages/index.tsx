@@ -8,7 +8,7 @@ import CarSection from '@/components/sections/CarSection'
 import HowItWorks from '@/components/sections/HowItWorks'
 import Hero from '@/components/sections/Hero'
 import Footer from '@/components/layout/Footer'
-import Input from '../components/ui/Input'
+import {Input} from '../components/ui/Input'
 import Cars from '@/components/sections/Cars'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,12 +20,12 @@ export default function Home() {
 
   return (
     <>
-      <section className=' bg-[#F3F2EF] font-mont'>
-        <Hero />
+      <section className=' font-mont'>
+        {/* <Hero />
         <HowItWorks />
         <CarSection />
-        <Footer />
-        {/* <Cars /> */}
+        <Footer /> */}
+        <Cars />
       </section>
     </>
 
