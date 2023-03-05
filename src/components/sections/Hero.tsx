@@ -40,7 +40,7 @@ const Hero = () => {
             <div className="w-full  flex justify-between absolute">
 
                 
-                <div className="w-1/2 pl-40 z-50 py-28">
+                <div className="w-1/2 pl-40 z-50 py-36">
 
                 <div className="flex flex-col gap-5">
                 <h1 className="text-5xl w-full xl:text-6xl text-black font-bold leading-[60px] xl:leading-[70px]">Best deals on your next
