@@ -1,6 +1,7 @@
 import CarCard from "../cards/CarCard";
 import { cars } from "@/data/cars";
 import Button from "../ui/Button";
+import Link from "next/link";
 const DashboardAdmin = () => {
     return (
         <>
@@ -25,10 +26,13 @@ const DashboardAdmin = () => {
 </svg>
 <p>Filter</p>
                     </div>
+                    <Link href="/addCar">
                     <Button svg={<svg width="20" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M29.506 17.6466L17.006 17.6466L17.006 30.1466L12.8394 30.1466L12.8394 17.6466L0.339355 17.6466L0.339355 13.48L12.8394 13.48L12.8394 0.97998L17.006 0.97998L17.006 13.48L29.506 13.48L29.506 17.6466Z" fill="white" />
                     </svg>} text="Add new Car"
                     />
+                    </Link>
+                    
                 </div>
             </div>
             <div className="h-[50vh]  grid grid-cols-3 gap-10  mt-16 overflow-scroll">

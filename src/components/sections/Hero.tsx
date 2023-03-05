@@ -6,6 +6,7 @@ import Select from 'react-select'
 import DatePicker from 'react-date-picker';
 import { useState } from "react";
 import { useRouter } from "next/router";
+import NavBar from "../layout/NavBar";
 
 const Hero = () => {
 
@@ -31,18 +32,23 @@ const Hero = () => {
 
 
         <div className="relative w-full hero h-[90vh] flex flex-col xl:flex xl:flex-row  justify-center bg-green-500
-                 bg-gray-900/30 backdrop-brightness-75  py-28">
+                 bg-gray-900/30 backdrop-brightness-75   py-5">
+                    <NavBar />
 <button onClick={handleClick}>Dashboard</button>
   <Image src={hero} alt="car" layout="fill"/>
            {/* <div className="blur"></div> */}
-            <div className="w-full flex justify-between absolute">
-                <div className="w-1/2 pl-44">
+            <div className="w-full  flex justify-between absolute">
+
+                
+                <div className="w-1/2 pl-40 z-50 py-28">
+
+                <div className="flex flex-col gap-5">
                 <h1 className="text-5xl w-full xl:text-6xl text-black font-bold leading-[60px] xl:leading-[70px]">Best deals on your next
                     rental. BOOK NOW</h1>
                 <p className="font-medium text-xl">Easy Search</p>
                 <div className="bg-white py-10 rounded-lg w-full xl:flex xl:flex-row  md:block justify-between items-center px-5 xl:h-12">
                     
-                    <Select options={options} placeholder="Type of car you looking for" className="outline-none border-0" />
+                    <Select options={options} placeholder="Car type" className="outline-none border-0" />
                     <div className="flex gap-3 items-center border-l border-black px-4 h-12">
                         <p>From</p>
                         <svg className="h-10" width="43" height="46" viewBox="0 0 43 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,25 +69,27 @@ const Hero = () => {
 
                     </div>
                 </div>
-                </div>
-                
                 <div className="flex gap-10 items-center mt-5">
                     <p className="font-bold">Or</p>
-                <Button styles="bg-[#a5f3fc] text-black w-44 mt-0 shadow-xl py-4" text="View all cars" />
+                <Button styles="bg-primary-purple text-white font-bold w-44 mt-0 shadow-xl py-4" text="View all cars" />
 
                 </div>
-                <div className="h-[30rem] w-[40rem] mb-0 mr-0 relative">
+                </div>
+                </div>
+                
+             
+                <div className="h-[30rem] w-[40rem] mb-0 mr-0 relative z-50 mt-40">
                 <Image src={carHero} className=" absolute object-fit" alt="car" layout="fill" />
             </div>
             </div>
 
             
-            {/* <div className="absolute inset-0 overlay h-full w-[50%] z-20 test bg-black/90"></div> */}
+
+            <div className="absolute inset-0 overlay h-full w-full z-20"></div>
         </div>
 
 
 
-        //         <section className="hero pl-20 bg-blend-multiply w-full h-auto flex justify-between">
 
 
 
