@@ -1,15 +1,27 @@
 import { apiSlice } from '@/services/authApiSlice'
 import { setupListeners } from '@reduxjs/toolkit/query'
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-// import storage from "redux-persist/lib/storage";
+import {persistReducer, persistStore} from 'redux-persist'
 
+import storage from "redux-persist/lib/storage";
+
+const persistConfig = {
+    key: "root",
+    storage,
+    blacklist: [apiSlice.reducerPath],
+  };
+  const reducers = combineReducers({
+    [apiSlice.reducerPath]: apiSlice.reducer,
+    // auth: authReducer,
+  });
+  
+const persistedReducer = persistReducer(persistConfig, reducers);
 // config the store 
-const store= configureStore({
-   reducer: {
-    [apiSlice.reducerPath] : apiSlice.reducer
-   },
+export const store= configureStore({
+   reducer: persistedReducer,
+
    middleware: (getDefaultMiddleware) => 
    getDefaultMiddleware().concat(apiSlice.middleware)
 })
 
-setupListeners(store.dispatch)
+export const persistor = persistStore(store)
