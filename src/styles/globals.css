@@ -13,3 +13,7 @@
 .overlay {
   background: linear-gradient(89.6deg, #F4F3FF 30.69%, rgba(244, 243, 255, 0.2) 99.68%)
 }
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}

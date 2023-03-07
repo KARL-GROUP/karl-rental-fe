@@ -1,6 +1,7 @@
 import Image from "next/image";
 import carHero from '../../../public/assets/herocar.png'
 import hero from '../../../public/assets/hero.jpg'
+import map from '../../../public/assets/map.png'
 import Button from "../ui/Button";
 import Select from 'react-select'
 import DatePicker from 'react-date-picker';
@@ -35,7 +36,7 @@ const Hero = () => {
                  bg-gray-900/30 backdrop-brightness-75   py-5">
                     <NavBar />
 <button onClick={handleClick}>Dashboard</button>
-  <Image src={hero} alt="car" layout="fill"/>
+  <Image src={map} alt="car" layout="fill"/>
            {/* <div className="blur"></div> */}
             <div className="w-full  flex justify-between absolute">
 

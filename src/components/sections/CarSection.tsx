@@ -149,9 +149,7 @@ const CarSection = () => {
 
       </SectionWrapper>
 
-      <section>
-        <h1>What Our customer says about us </h1>
-      </section>
+     
     </>
 
   );

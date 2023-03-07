@@ -10,6 +10,7 @@ import Hero from '@/components/sections/Hero'
 import Footer from '@/components/layout/Footer'
 import {Input} from '../components/ui/Input'
 import Cars from '@/components/sections/Cars'
+import Testimonies from '@/components/sections/Testimonies'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,10 +21,17 @@ export default function Home() {
 
   return (
     <>
+    <Head>
+    <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <section className=' font-mont bg-[#F4F3FF]'>
         <Hero />
         <HowItWorks />
         <CarSection />
+        <Testimonies />
         <Footer />
         {/* <Cars /> */}
       </section>
