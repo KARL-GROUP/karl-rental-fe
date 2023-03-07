@@ -1,30 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { createSlice } from '@reduxjs/toolkit'
+import { apiSlice } from '@/services/authApiSlice'
+import { setupListeners } from '@reduxjs/toolkit/query'
 
-// create a slice 
-export const iconslice= createSlice({
-name:"icon",
-initialState:{
-     icon:'moon'
-},
-reducers:{
-     iconMoon:state=>{
-        state.icon= 'moon'
-     },
-     iconSun:state=>{
-        state.icon= 'sun'
-    },
-   }
-})
 // config the store 
 const store= configureStore({
    reducer: {
-      icon: iconslice.reducer
-   }
+    [apiSlice.reducerPath] : apiSlice.reducer
+   },
+   middleware: (getDefaultMiddleware) => 
+   getDefaultMiddleware().concat(apiSlice.middleware)
 })
 
-// export default the store 
-export default store
-
-// export the action
-export const iconAction = iconslice.actions
+setupListeners(store.dispatch)
