@@ -46,7 +46,7 @@ const GeneralInfo = () => {
                 <div className="flex overflow-x-scroll gap-10 py-10">
                     {recentOrders.map((order, index) => {
                         return (
-                            <div className="bg-white shadow py-5 px-5 min-w-[15rem]">
+                            <div key={index} className="bg-white shadow py-5 px-5 min-w-[15rem]">
                                 <h1 className="font-bold">Car name</h1>
                                 <p className="font-bold">Plate: <span className="font-normal">{order.plate}</span> </p>
                                 <p className="font-bold">Status: <span className="text-[#E78A00]">{order.status}</span> </p>

@@ -28,7 +28,7 @@ const Landing = () => {
 
     return (
         <>
-            <SectionWrapper className="bg-[#F3F2EF]">
+            <SectionWrapper className="bg-main">
                 <header className="flex gap-20 py-5">
                     <h1 className="text-3xl">Karl</h1>
                     <ul className="flex gap-10 items-center">
@@ -108,7 +108,7 @@ const Landing = () => {
                     })}
                 </section> */}
 
-                <section className="grid grid-cols-4 gap-y-5 gap-x-10 bg-[#F3F2EF] py-10">
+                <section className="grid grid-cols-4 gap-y-5 gap-x-10 bg-main py-10">
                     {samples.map((car, index)=> {
                         return (
                             <div key={index} className="bg-white shadown rounded-xl py-5 px-5 border flex flex-col gap-5">
