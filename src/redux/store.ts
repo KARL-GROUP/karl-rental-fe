@@ -9,6 +9,7 @@ import {persistReducer, persistStore,  FLUSH,
     REGISTER,} from 'redux-persist'
 
 import storage from "redux-persist/lib/storage";
+import adminRegisterSlice from './reducers/adminRegisterSlice';
 
 const persistConfig = {
     key: "root",
@@ -17,7 +18,7 @@ const persistConfig = {
   };
   const reducers = combineReducers({
     [apiSlice.reducerPath]: apiSlice.reducer,
-    // auth: authReducer,
+    adminRegister: adminRegisterSlice,
   });
   
 const persistedReducer = persistReducer(persistConfig, reducers);

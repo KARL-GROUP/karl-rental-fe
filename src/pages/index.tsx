@@ -28,11 +28,16 @@ export default function Home() {
         />
       </Head>
       <section className=' font-mont bg-[#F4F3FF]'>
-        <Hero />
+        {/* <Hero />
         <HowItWorks />
         <CarSection />
         <Testimonies />
-        <Footer />
+        <Footer /> */}
+
+        <form>
+          <input placeholder='email' />
+          <input placeholder='password' />
+        </form>
         {/* <Cars /> */}
       </section>
     </>

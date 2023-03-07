@@ -10,7 +10,7 @@ const initialState = {
 
 //creating signup slice
 
-export const AdminRegisterSlice = createSlice({
+export const adminRegisterSlice = createSlice({
   name: "registerSlice",
   initialState,
   reducers: {
@@ -24,5 +24,5 @@ export const AdminRegisterSlice = createSlice({
   },
 });
 
-export const { setEmail, setPassword } = AdminRegisterSlice.actions;
-export default AdminRegisterSlice.reducer;
+export const { setEmail, setPassword } = adminRegisterSlice.actions;
+export default adminRegisterSlice.reducer;
