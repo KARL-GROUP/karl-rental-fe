@@ -14,10 +14,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main>
       <Provider store={store}>
-
+        <ToastContainer />
+        <Component {...pageProps} />
       </Provider>
-      <ToastContainer />
-      <Component {...pageProps} />
+
     </main>
   )
 }

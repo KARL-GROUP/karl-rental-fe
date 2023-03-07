@@ -8,7 +8,7 @@ export const apiSlice = createApi({
     adminRegister: builder.mutation({
       query: (body) => ({
         url: `/auth/register`,
-        mrthod: "POST",
+        method: "POST",
         body,
       }),
     }),

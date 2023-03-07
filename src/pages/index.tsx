@@ -11,7 +11,8 @@ import Footer from '@/components/layout/Footer'
 import {Input} from '../components/ui/Input'
 import Cars from '@/components/sections/Cars'
 import Testimonies from '@/components/sections/Testimonies'
-
+import { useAdminRegisterMutation } from '@/services/authApiSlice'
+import { useState } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -19,6 +20,27 @@ export default function Home() {
   //   console.log('Button was clicked');
   // };
 
+  const initialData = {
+    email: "",
+    password: ""
+  }
+
+  const [adminInfo, setAdminInfo] = useState(initialData)
+  const inputHandler = (e: any) => {
+    setAdminInfo({...adminInfo, [e.target.name] : e.target.value})
+  }
+
+  const [registerAdmin, {isLoading, isError}] = useAdminRegisterMutation()
+console.log("test", registerAdmin)
+const register = async (e: any) => {
+  e.preventDefault()
+  await registerAdmin(adminInfo).unwrap().then((payload) => {
+    console.log("payload", payload)
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+}
   return (
     <>
     <Head>
@@ -35,8 +57,9 @@ export default function Home() {
         <Footer /> */}
 
         <form>
-          <input placeholder='email' />
-          <input placeholder='password' />
+          <input placeholder='email' onChange={inputHandler}/>
+          <input placeholder='password' onChange={inputHandler}/>
+          <button onClick={register}>Submit</button>
         </form>
         {/* <Cars /> */}
       </section>
