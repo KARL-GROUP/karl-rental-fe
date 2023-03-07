@@ -16,10 +16,7 @@ import { useState } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  // const handleClick = () => {
-  //   console.log('Button was clicked');
-  // };
-
+  
   const initialData = {
     email: "",
     password: ""
@@ -57,8 +54,10 @@ const register = async (e: any) => {
         <Footer /> */}
 
         <form>
-          <input placeholder='email' onChange={inputHandler}/>
-          <input placeholder='password' onChange={inputHandler}/>
+        <input name="userName" placeholder='username' onChange={inputHandler}/>
+          <input name="email" placeholder='email' onChange={inputHandler}/>
+          <input name="password" placeholder='password' onChange={inputHandler}/>
+          <input name="passwordConfirm" placeholder='confirm password' onChange={inputHandler}/>
           <button onClick={register}>Submit</button>
         </form>
         {/* <Cars /> */}
